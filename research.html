@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="https://kit.fontawesome.com/589f919715.js"></script>
+    <link rel="stylesheet" href="css/academicons.min.css"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159652043-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-159652043-1');
+    </script>
+    <title>Nitin Awathare</title>
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar navbar-dark navbar-expand-md fixed-top" style="background-color: #0e629c">
+      <!-- Navbar brand -->
+      <a class="navbar-brand" href="index.html">&nbsp;&nbsp;Nitin Awathare&nbsp;&nbsp;&nbsp;</a>
+      <!-- Collapse button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fas fa-bars"></span>
+      </button>
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="basicExampleNav">
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="research.html">Research</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="teaching.html">Teaching</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="education.html">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="files/myCV.pdf">CV</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row" style="margin-top: 10%">
+      <!--   <div class="col-md-12">
+          <div class="alert alert-dark" role="alert">
+            Click paper title for more information!
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 3%"> -->
+        <div class="col-md-12">
+          <h3>Publications</h3>
+        </div>
+        <div id="accordion" role="tablist" aria-multiselectable="true" class="myaccordion">
+          <!-- Scheduling -->
+          <div class="card">
+            <div class="card-header" role="tab" id="headingScheduling">
+              <div class="mb-0">
+                <a data-toggle="collapse" href="#collapseScheduling" aria-expanded="true" aria-controls="collapseScheduling">
+                <b style="color: #5a0e78">RENOIR: Accelerating Blockchain Validation using State Caching</b>
+                </a>
+                (with Sourav Das, Vinay J. Ribeiro, and Umesh Bellur). <i>In Proceedings of the ACM/SPEC International Conference on Performance Engineering</i> (ICPE '2021).
+              </div>
+            </div>
+            <div id="collapseScheduling" class="collapse" role="tabpanel" aria-labelledby="headingScheduling" data-parent="#accordion">
+              <div class="card-body" style="margin-left: 2%">
+                <b> Abstract. </b> A Blockchain system such as Ethereum is a peer to peer network
+                      where each node works in three phases: creation, mining, and vali-
+                      dation phases. In the creation phase, it executes a subset of locally
+                      cached transactions to form a new block. In the mining phase, the
+                      node solves a cryptographic puzzle (Proof of Work - PoW) on the
+                      block it forms. On receiving a block from another peer, it starts the
+                      validation phase, where it executes the transactions in the received
+                      block in order to ensure all transactions are valid. This execution
+                      also updates the blockchain state, which must be completed before
+                      creating the next block. A long block validation time lowers the
+                      system’s overall throughput and brings the well known Verifier’s
+                      dilemma into play. Additionally, this leads to wasted mining power
+                      utilization (MPU).<br>
+                      &nbsp &nbsp Through extensive measurement of 2000 nodes from the produc-
+                      tion Ethereum network we find that during block validation, nodes
+                      redundantly execute more than 80% of the transactions in greater
+                      than 75% of the blocks they receive - this points to significant
+                      potential to save time and computation during block validation.<br>
+                      &nbsp &nbsp Motivated by this, we present Renoir, a novel mechanism that
+                      caches state from transaction execution during the block creation
+                      phase and reuses it to enable nodes to skip (re)executing these trans-
+                      actions during block validation. Our detailed evaluation of Renoir
+                      on a 50 node testbed mimicking the top 50 Ethereum miners illus-
+                      trates that when gas limit is increased to 20 times the default value,
+                      to accommodate computationally intensive transactions, Renoir
+                      reduces validation time by 90% compared to Ethereum. In addi-
+                      tion, throughput of Ethereum reduces from 35326 tx/hour to 24716
+                      tx/hour and MPU from 96% to 67% but these barely change for
+                      Renoir. Furthermore, we deploy a node running Renoir on the
+                      production Ethereum network. Our measurement illustrates that
+                      Renoir reduces the block validation time by as much as 50%<br><br>
+                <button type="button" class="btn btn-outline-primary btn-sm"> 
+                  <a href="https://dl.acm.org/doi/10.1145/3427921.3450247" style="color:inherit">Paper</a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- COVID-19 -->
+          <div class="card">
+            <div class="card-header" role="tab" id="headingCovid">
+              <div class="mb-0">
+              <a data-toggle="collapse" href="#collapseCovid" aria-expanded="true" aria-controls="collapseCovid">
+              <b style="color: #5a0e78">REBAL: Channel Balancing for Payment Channel Networks</b>
+              </a>
+              (with Suraj, Akash, Vinay J. Ribeiro, and Umesh Bellur). Forthcoming in <i>29th International Symposium on the Modeling, Analysis, and Simulation of Computer and Telecommunication Systems</i> (MASCOTS 2021). <br>
+              <!-- <p style="margin-left: 20px; margin-bottom: 0px">
+                <i class="fas fa-star"></i><i> William Pierskalla Best Paper (2020). </i>
+              </p> -->
+              </div>
+            </div>
+            <div id="collapseCovid" class="collapse" role="tabpanel" aria-labelledby="headingCovid" data-parent="#accordion">
+              <div class="card-body" style="margin-left: 2%">
+                <b> Abstract. </b> Cryptocurrency networks are a promising infrastructure
+                              for pseudonymous online payments. However, low
+                              throughput has prevented their widespread acceptance. A
+                              promising solution to scale throughput is the Payment channel
+                              network (PCN), exemplified by the Lightning Network (LN),
+                              that uses a network of off-chain bidirectional payment channels
+                              between parties that wish to transact often. Since payments use
+                              the shortest paths with sufficient funds over this network, channel
+                              balances get exhausted in the direction transactions flow and
+                              eventually become unidirectional. This results in transactions
+                              failing and consequently a lower transaction success ratio. Our
+                              observations on the production LN show that over 63% of the
+                              channels lose over 80% of the channel balance in one direction
+                              over time, which makes the success ratio of a real-world workload
+                              drop from 71% to 29%. A unidirectional channel along a path
+                              results in a failure message back to the source that recomputes the
+                              path, excluding the failed channel and reattempts the transaction,
+                              thus adding to the completion latency even for those transactions
+                              that do complete.<br>
+                              &nbsp &nbsp We propose REBAL, a distributed re-balancing mechanism,
+                              and a new routing scheme to address the above issues. REBAL
+                              maximizes the extent to which channels can be re-balanced across
+                              the entire network. REBAL addresses the completion latency
+                              issue by re-routing transactions from intermediate nodes around
+                              a unidirectional channel rather than propagating the failure back
+                              to the source.<br>
+                              &nbsp &nbsp Our comprehensive evaluation of REBAL shows that the success
+                              ratio improves from 30.18% to 79.54% and success volume
+                              from 3.98% to 29.99% for a real-world workload derived from
+                              the Ripple network, without adversely impacting the transaction
+                              latency. Even at very high transaction rates, REBAL outperforms
+                              Lightning Network Daemon (LND- a Golang implementation of
+                              LN) (12%) with a success ratio of 43.76%.<br><br>
+                <!-- <button type="button" class="btn btn-outline-primary btn-sm"> 
+                  <a href="https://link.springer.com/article/10.1007/s10729-020-09542-0" style="color:inherit">Paper</a>
+                </button> -->
+                <button type="button" class="btn btn-outline-primary btn-sm"> 
+                  <a href="https://ieeexplore.ieee.org/document/9614304" style="color:inherit">Paper</a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Rl for CVRP -->
+          <div class="card">
+            <div class="card-header" role="tab" id="headingCVRP">
+              <div class="mb-0">
+              <a data-toggle="collapse" href="#collapseCVRP" aria-expanded="true" aria-controls="collapseCVRP">
+              <b style="color: #5a0e78">Tuxedo: Maximizing Smart Contract computation in PoW Blockchains</b>
+              </a>
+              (with Sourav Das, Ling Ren, Vinay J. Ribeiro, and Umesh Bellur). Forthcoming in <i>ACM SIGMETRICS / IFIP PERFORMANCE</i> (2022). <br>
+              </div>
+            </div>
+            <div id="collapseCVRP" class="collapse" role="tabpanel" aria-labelledby="headingCVRP" data-parent="#accordion">
+              <div class="card-body" style="margin-left: 2%">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <b> Abstract. </b> Proof-of-Work (PoW) based blockchains typically allocate only a tiny fraction (e.g., less than 1% for Ethereum)
+                    of the average interarrival time (I) between blocks for validating smart contracts present in transactions. In
+                    such systems, block validation and PoW mining are typically performed sequentially, the former by CPUs
+                    and the latter by ASICs. A trivial increase in validation time (𝜏) introduces the popularly known Verifier’s
+                    Dilemma, and as we demonstrate, causes more forking and hurts fairness. Large 𝜏 also reduces the tolerance
+                    for safety against a Byzantine adversary. Solutions that offload validation to a set of non-chain nodes (a.k.a.
+                    off-chain approaches) suffer from trust and performance issues that are non-trivial to resolve.<br>
+                    &nbsp &nbsp In this paper, we present Tuxedo, the first on-chain protocol to theoretically scale 𝜏/I ≈ 1 in PoW
+                    blockchains. The key innovation in Tuxedo is to perform CPU-based block processing in parallel to ASIC
+                    mining. We achieve this by allowing miners to delay validation of transactions in a block by up to 𝜁 blocks,
+                    where 𝜁 is a system parameter. We perform security analysis of Tuxedo considering all possible adversarial
+                    strategies in a synchronous network with maximum end-to-end delay Δ and demonstrate that Tuxedo
+                    achieves security equivalent to known results for longest chain PoW Nakamoto consensus. Our prototype
+                    implementation of Tuxedo atop Ethereum demonstrates that it can scale 𝜏 without suffering the harmful
+                    effects of naïve scaling up of 𝜏/I in existing blockchains. <br><br>
+                    <button type="button" class="btn btn-outline-primary btn-sm">
+                      <a href="https://dl.acm.org/doi/10.1145/3491053" style="color:inherit">Paper</a>
+                    </button>
+                    <!-- <button type="button" class="btn btn-outline-primary btn-sm"> 
+                      <a href="https://studio.slideslive.com/web_recorder/share/20201021T184025Z__NeurIPS_posters__18073__reinforcement-learning-with-co?s=424216f5-ef5c-46ba-a6a7-fe482e293e82" style="color:inherit">Video</a>
+                    </button> -->
+                  </div>
+                  <!-- <div class="col-lg-4 pt-4 pt-lg-0">
+                    <img src="files/neurips-thumbnail.png" alt="travel-times-picture" width="100%">
+                  </div> -->
+                </div>
+                <!-- https://studio.slideslive.com/web_recorder/share/20201021T184025Z__NeurIPS_posters__18073__reinforcement-learning-with-co?s=424216f5-ef5c-46ba-a6a7-fe482e293e82 -->
+              </div>
+            </div>
+          </div>
+          <!-- IJAA BPS -->
+          <!-- <div class="card">
+            <div class="card-header" role="tab" id="headingEdelman">
+              <div class="mb-0">
+              <a data-toggle="collapse" href="#collapseEdelman" aria-expanded="true" aria-controls="collapseEdelman">
+              <b>Bus Routing Optimization Helps Boston Public Schools Design Better Policies</b>
+              </a>
+              (with D. Bertsimas, W. Eger, J. Hanlon, and S. Martin). <i>INFORMS Journal of Applied Analytics</i> 50(1):37-49 (2020). <br>
+              </div>
+            </div>
+            <div id="collapseEdelman" class="collapse" role="tabpanel" aria-labelledby="headingEdelman" data-parent="#accordion">
+              <div class="card-body" style="margin-left: 2%">
+                <i> Abstract. </i> In the winter of 2016, Boston Public Schools (BPS) launched a crowdsourcing national competition to create a better way to construct bus routes to improve efficiency, deepen the ability to model policy changes, and realign school start times. The winning team came from the Massachusetts Institute of Technology (MIT). They developed an algorithm to construct school bus routes, by assigning students to stops, combining stops into routes, and optimally assigning vehicles to routes. BPS has used this algorithm for two years running; in the summer of 2017, this led to a 7% reduction in the BPS bus fleet. Bus routing optimization also gives BPS the unprecedented ability to understand the financial impact of new policies that affect transportation. In particular, the MIT research team developed a new mathematical model to select start times for all schools in the district in a way that takes transportation into account. Using this methodology, BPS proposed a solution that would have saved an additional $12M annually, and shifted students to more developmentally appropriate school start times (by reducing the number of high school students starting before 8:00 a.m. from 74% to 6% and the average number of elementary school students dismissed after 4:00 pm from 33% to 15%). However, 85% of the schools’ start times would have been changed, with a median change of one hour. This magnitude of change was too dramatic for the district to absorb, as evidenced by strong vocal opposition from some of the school communities who were negatively affected, and the plan was not implemented.<br><br>
+                <button type="button" class="btn btn-outline-primary btn-sm"> 
+                  <a href="https://pubsonline.informs.org/doi/10.1287/inte.2019.1015" style="color:inherit">Paper</a>
+                </button>
+              </div>
+            </div>
+          </div> -->
+          <!-- PNAS BPS -->
+          <!-- <div class="card">
+            <div class="card-header" role="tab" id="headingBelltimes">
+              <div class="mb-0">
+              <a data-toggle="collapse" href="#collapseBelltimes" aria-expanded="true" aria-controls="collapseBelltimes">
+              <b>Optimizing Schools' Start Time and Bus Routes</b>
+              </a>
+              (with D. Bertsimas and S. Martin). <i> Proceedings of the National Academy of Sciences</i> 116(13): 5943-5948 (2019). <br>
+              <p style="margin-left: 20px; margin-bottom: 0px">
+              <i class="fas fa-star"></i><i> Franz Edelman Award Finalist (2019). </i> <br>
+              <i class="fas fa-star"></i><i> MIT ORC Best Student Paper (2018). </i> <br>
+              <i class="fas fa-star"></i><i> INFORMS Doing Good With Good OR Student Paper Competition Runner-up (2018). </i>
+              </p>
+              </div>
+            </div>
+            <div id="collapseBelltimes" class="collapse" role="tabpanel" aria-labelledby="headingBelltimes" data-parent="#accordion">
+              <div class="card-body" style="margin-left: 2%">
+                <i> Summary. </i> Spreading start times allows school districts to reduce transportation costs by reusing buses between schools. However, assigning each school a time involves both estimating the impact on transportation costs and reconciling additional competing objectives. These challenges force many school districts to make myopic decisions, leading to an expensive and inequitable status quo. For instance, most American teenagers start school before 8:00 AM, despite evidence of significant associated health issues. We propose an algorithm to jointly solve the school bus routing and bell time selection problems. Our application in Boston led to $5 million in yearly savings (maintaining service quality despite a 50-bus fleet reduction) and to the unanimous approval of the first school start time reform in 30 years.<br><br>
+                <button type="button" class="btn btn-outline-primary btn-sm"> 
+                  <a href="https://www.pnas.org/cgi/doi/10.1073/pnas.1811462116" style="color:inherit">Paper</a>
+                </button>
+                <button type="button" class="btn btn-outline-primary btn-sm"> 
+                  <a href="files/optimizing-school-start-times.pdf" style="color:inherit">PDF</a>
+                </button>
+                <button type="button" class="btn btn-outline-primary btn-sm"> 
+                  <a href="files/school-buses-to-bell-times.pdf" style="color:inherit">Preprint</a>
+                </button>
+                <button type="button" class="btn btn-outline-primary btn-sm"> 
+                  <a href="https://sinews.siam.org/Details-Page/a-school-bus-trip-to-the-crossroads-of-policy-and-optimization-1" style="color:inherit">Blog</a>
+                </button>
+                <button type="button" class="btn btn-outline-primary btn-sm"> 
+                  <a href="https://github.com/mitschoolbus/SchoolBusRouting" style="color:inherit">Code</a>
+                </button>
+              </div>
+            </div>
+          </div> -->
+          <!-- OR Travel Times -->
+       <!--    <div class="card">
+            <div class="card-header" role="tab" id="headingTravelTimes">
+              <div class="mb-0">
+              <a class="collapsed" data-toggle="collapse" href="#collapseTravelTimes" aria-expanded="false" aria-controls="collapseTravelTimes">
+              <b>Travel Time Estimation in the Age of Big Data</b>
+              </a>
+              (with D. Bertsimas, P. Jaillet, and S. Martin). <i> Operations Research</i> 67(2): 498-515 (2019).
+              </div>
+            </div>
+            <div id="collapseTravelTimes" class="collapse" role="tabpanel" aria-labelledby="headingTravelTimes" data-parent="#accordion">
+              <div class="card-body" style="margin-left: 2%">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <i> Summary. </i> Understanding complex city traffic patterns is a major priority for modern urban planners, leading to a sharp increase in the amount and the diversity of traffic data being collected. For instance, taxi companies in many major cities now record metadata for every individual car ride, such as its origin, destination, and travel time. In this paper, we show that we can leverage network optimization insights to extract accurate travel time estimations from such origin–destination data, using information from a large number of taxi trips to reconstruct the traffic patterns in an entire city. Using synthetic data, we establish the robustness of our algorithm to high variance data, and the interpretability of its results. We then use hundreds of thousands of taxi travel time observations in Manhattan to show that our algorithm can provide insights about urban traffic patterns on different scales and accurate travel time estimations throughout the network. <br><br>
+                    <button type="button" class="btn btn-outline-primary btn-sm"> 
+                      <a href="https://doi.org/10.1287/opre.2018.1784" style="color:inherit">Paper</a>
+                    </button>
+                    <button type="button" class="btn btn-outline-primary btn-sm"> 
+                      <a href="files/travel-time-estimation.pdf" style="color:inherit">Preprint</a>
+                    </button>
+                  </div>
+                  <div class="col-lg-4 pt-4 pt-lg-0">
+                    <img src="files/manhattan_zoom_1820.png" alt="travel-times-picture" width="100%">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>                     
+      </div>
+    </div>
+    <div class="container">
+      <div class="row" style="margin-top: 3%">
+        <div class="col-md-12">
+          <h3>Working Papers</h3>
+        </div>
+        <div id="accordionCompleted" role="tablist" aria-multiselectable="true" class="myaccordion">
+          <!-- ESY -->
+          <div class="card">
+            <div class="card-header" role="tab" id="headingESY">
+              <div class="mb-0">
+              <a data-toggle="collapse" href="#collapseESY" aria-expanded="true" aria-controls="collapseESY">
+              <b style="color: #5a0e78">Renoir-NG: Speedup Block Creation and Validation using State Caching in Blockchain</b>
+              </a>
+              (with Rahul Paknikar, Vinay J. Ribeiro, and Umesh Bellur).
+              </div>
+            </div>
+            <div id="collapseESY" class="collapse" role="tabpanel" aria-labelledby="headingESY" data-parent="#accordionCompleted">
+              <div class="card-body" style="margin-left: 2%">
+                <b> Abstract. </b> Unlike Renoir, Renoir-NG intent to reduce both block validation time as well as block creation time.<br><br>
+              </div>
+            </div>
+          </div>
+          <!-- Missing -->
+          
+          
+          <!-- Price of interpretability -->
+          <!-- <div class="card">
+            <div class="card-header" role="tab" id="headingInterpretability">
+              <div class="mb-0">
+                <a data-toggle="collapse" href="#collapseInterpretability" aria-expanded="true" aria-controls="collapseInterpretability">
+                <b>The Price of Interpretability</b>
+                </a>
+                (with D. Bertsimas, P. Jaillet and S. Martin). <br>
+                <p style="margin-left: 20px; margin-bottom: 0px">
+                  <i class="fas fa-star"></i><i> INFORMS Data Mining Section Best Student Paper Finalist (2019). </i>
+                </p>
+              </div>
+            </div>
+            <div id="collapseInterpretability" class="collapse" role="tabpanel" aria-labelledby="headingInterpretability" data-parent="#accordionCompleted">
+              <div class="card-body" style="margin-left: 2%">
+                <i> Abstract. </i> When quantitative models are used to support decision-making on complex and important topics, understanding a model's "reasoning" can increase trust in its predictions, expose hidden biases, or reduce vulnerability to adversarial attacks. However, the concept of interpretability remains loosely defined and application-specific. In this paper, we introduce a mathematical framework in which machine learning models are constructed in a sequence of interpretable steps. We show that for a variety of models, a natural choice of interpretable steps recovers standard interpretability proxies (e.g., sparsity in linear models). We then generalize these proxies to yield a parametrized family of consistent measures of model interpretability. This formal definition allows us to quantify the "price" of interpretability, i.e., the tradeoff with predictive accuracy. We demonstrate practical algorithms to apply our framework on real and synthetic datasets.<br><br>
+                <button type="button" class="btn btn-outline-primary btn-sm"> 
+                  <a href="https://arxiv.org/abs/1907.03419" style="color:inherit">Preprint</a>
+                </button>
+                <button type="button" class="btn btn-outline-primary btn-sm"> 
+                  <a href="https://arxiv.org/abs/1907.04669" style="color:inherit">Conference preprint</a>
+                </button>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row" style="margin-top: 5%">
+        <div class="col-md-12">
+        <h3>Patent Application</h3> 
+        
+        <ul>
+      <li><a href="https://patents.google.com/patent/US20200409941A1/en"> Method for scaling computation in blockchain by delaying transaction execution </a>, Umesh Bellur, <b>Nitin Awathare</b>, Sourav Das, Vinay J. Ribeiro <b>US Patent App. 16/912,389</b>
+      </li>
+      </ul> 
+        <!-- <b>INFORMS</b> Data Mining and Decision Analytics Workshop, 2020. <i>Prediction with Missing Data.</i> <br>
+        <b>INFORMS</b> Annual Meeting, 2020. <i>From Assignment to Routing: Optimizing Public School Operations.</i><br>
+        <b>INFORMS</b> Annual Meeting, 2020. <i>Ventilator Allocation and Policy Evaluation.</i> <br>
+        <b>Kellogg-Wharton</b> OM Workshop, 2020. <i>Optimizing School Operations.</i><br>
+        <b>MIT LIDS</b> Student Conference, Cambridge, 2020. <i>The Price of Interpretability.</i><br>
+        <b>INFORMS</b> Annual Meeting, Seattle, 2019. <i>The Price of Interpretability.</i><br>
+        <b>INFORMS</b> Annual Meeting, Seattle, 2019. <i> From Transportation to Policy: Optimizing School Start Times and Bus Routes.</i><br>
+        <b>Center for Strategic and Budgetary Assessments</b> Data as a Resource Workshop, Washington, DC, 2019. <i>Analytics for Public Schools.</i><br>
+        <b>Google</b> Research Talk, Cambridge, MA, 2019. <i>Families Over Algorithms: Are We Better Off Using Optimization to Choose School Start Times and Bus Routes?</i><br>
+        <b>MIT LIDS</b> Student Conference, Cambridge, 2019. <i>Driving Policy with Optimization.</i> <br>
+        <p style="margin-left: 20px; margin-bottom: 0px">
+          <i class="fas fa-star"></i> <i>Runner-up, Best Student Presentation.</i> <br>
+        </p>
+        <b>INFORMS</b> Annual Meeting, Phoenix, 2018. <i>Finding Equitable Start Times for Boston Public Schools.</i> <br>
+        <b>MIT ORC</b> Fall Seminar Series, Cambridge, 2018. <i>Driving Policy with Optimization.</i> <br>
+        <b>ISMP</b> Triennial Meeting, Bordeaux, France, 2018. <i>Travel Time Estimation in the Age of Big Data.</i> <br>
+        <b>MIT ORC</b> Special Seminar on Operations Research for Social Good, Cambridge, 2018. <i>8 Months on a School Bus: Analytics for Public Policy.</i> <a class="card-link" href="https://www.youtube.com/watch?v=LFeeaNP_rbY"><i class="fas fa-video" aria-hidden="false"></i></a> <br>
+        <b>INFORMS</b> Annual Meeting, Houston, 2017. <i>Travel Time Estimation in the Age of Big Data.</i><br>
+        <br> -->
+        <!-- <br> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row" style="margin-top: 5%">
+        <div class="col-md-12">
+        <h3>Reviewer</h3> 
+        <ul>
+      <li><a href="https://dl.acm.org/journal/tmis">Transactions on Management Information Systems(TMIS) </a><p>TMIS is a scholarly quarterly journal that encourages submissions related to algorithmic, analytical modeling, design science, and system-oriented research</p>
+      </li>
+      <li>
+      COMSNETS- Blockchain workshop
+      </li>
+      </ul>   
+        <!-- <b>INFORMS</b> Data Mining and Decision Analytics Workshop, 2020. <i>Prediction with Missing Data.</i> <br>
+        <b>INFORMS</b> Annual Meeting, 2020. <i>From Assignment to Routing: Optimizing Public School Operations.</i><br>
+        <b>INFORMS</b> Annual Meeting, 2020. <i>Ventilator Allocation and Policy Evaluation.</i> <br>
+        <b>Kellogg-Wharton</b> OM Workshop, 2020. <i>Optimizing School Operations.</i><br>
+        <b>MIT LIDS</b> Student Conference, Cambridge, 2020. <i>The Price of Interpretability.</i><br>
+        <b>INFORMS</b> Annual Meeting, Seattle, 2019. <i>The Price of Interpretability.</i><br>
+        <b>INFORMS</b> Annual Meeting, Seattle, 2019. <i> From Transportation to Policy: Optimizing School Start Times and Bus Routes.</i><br>
+        <b>Center for Strategic and Budgetary Assessments</b> Data as a Resource Workshop, Washington, DC, 2019. <i>Analytics for Public Schools.</i><br>
+        <b>Google</b> Research Talk, Cambridge, MA, 2019. <i>Families Over Algorithms: Are We Better Off Using Optimization to Choose School Start Times and Bus Routes?</i><br>
+        <b>MIT LIDS</b> Student Conference, Cambridge, 2019. <i>Driving Policy with Optimization.</i> <br>
+        <p style="margin-left: 20px; margin-bottom: 0px">
+          <i class="fas fa-star"></i> <i>Runner-up, Best Student Presentation.</i> <br>
+        </p>
+        <b>INFORMS</b> Annual Meeting, Phoenix, 2018. <i>Finding Equitable Start Times for Boston Public Schools.</i> <br>
+        <b>MIT ORC</b> Fall Seminar Series, Cambridge, 2018. <i>Driving Policy with Optimization.</i> <br>
+        <b>ISMP</b> Triennial Meeting, Bordeaux, France, 2018. <i>Travel Time Estimation in the Age of Big Data.</i> <br>
+        <b>MIT ORC</b> Special Seminar on Operations Research for Social Good, Cambridge, 2018. <i>8 Months on a School Bus: Analytics for Public Policy.</i> <a class="card-link" href="https://www.youtube.com/watch?v=LFeeaNP_rbY"><i class="fas fa-video" aria-hidden="false"></i></a> <br>
+        <b>INFORMS</b> Annual Meeting, Houston, 2017. <i>Travel Time Estimation in the Age of Big Data.</i><br>
+        <br> -->
+        <br>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
